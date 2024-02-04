@@ -20,5 +20,5 @@ https://github.com/kaantuncer/Moborobo-Project/
     * `roslaunch slam_toolbox online_async.launch params_file:=./src/moborobo/config/mapper_params_online_async.yaml use_sim_time:=true`
 
 ## How to Run?
-* run this command before launch: `source devel/setup.bash`
-* for launch: `roslaunch moborobo navigation.launch`
+* run this command in catkin_ws before launch: `source devel/setup.bash`
+* for launch: `roslaunch moborobo gmapping_room.launch`
