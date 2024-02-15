@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+    <link name="gps_link">
+      <!-- Some weird bug occurs if this joint gets the default inertia -->
+        <inertial>
+          <origin xyz="-0.052 0 0.111" rpy="0 0 0"/>
+          <inertia mass="0.001" ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+          <mass value="0.125"/>
+        </inertial>
+        <sensor name="moborobo_gps" type="gps">
+          <always_on>true</always_on>
+          <update_rate>1</update_rate>
+          <pose>0 0 0 0 0 0</pose>
+          <gps>
+            <position_sensing>
+              <horizontal>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+              </horizontal>
+              <vertical>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+              </vertical>
+            </position_sensing>
+          </gps>
+          <plugin name="my_gps_plugin" filename="libgazebo_ros_gps_sensor.so">
+            <ros>
+              <remapping>~/out:=/gps/fix</remapping>
+              </ros>
+          </plugin>
+        </sensor>
+      </link>
+      
+      
+      <joint name="gps_joint" type="fixed">
+        <axis xyz="0 0 1"/>
+        <parent link="base_link"/>
+        <child link="gps_link"/>
+        <origin xyz="-0.05 0 0.35" rpy="0 0 0"/>
+      </joint>
+      
+      <gazebo reference="gps_link">
+		<material>Gazebo/Orange</material>
+	  </gazebo>
+      
+</robot>

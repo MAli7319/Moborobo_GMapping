@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="output_final_position" default="false"/>
+    <arg name="output_location" default="~/dual_ekf_navsat_example_debug.txt"/>
+
+    <node pkg="robot_localization" type="ekf_node" name="ekf_filter_node_odom" output="screen">
+        <param name="rl_params_file" value="$(find moborobo)/config/dual_ekf_navsat_params.yaml"/>
+        <param name="use_sim_time" value="true"/>
+        <remap from="odometry/filtered" to="odometry/local"/>
+    </node>
+
+    <node pkg="robot_localization" type="ekf_node" name="ekf_filter_node_map" output="screen">
+        <param name="rl_params_file" value="$(find moborobo)/config/dual_ekf_navsat_params.yaml"/>
+        <param name="use_sim_time" value="true"/>
+        <remap from="odometry/filtered" to="odometry/global"/>
+    </node>
+
+    <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform" output="screen">
+        <param name="rl_params_file" value="$(find moborobo)/config/dual_ekf_navsat_params.yaml"/>
+        <param name="use_sim_time" value="true"/>
+        <remap from="imu/data" to="imu/data"/>
+        <remap from="gps/fix" to="gps/fix"/>
+        <remap from="gps/filtered" to="gps/filtered"/>
+        <remap from="odometry/gps" to="odometry/gps"/>
+        <remap from="odometry/filtered" to="odometry/global"/>
+    </node>
+</launch>
+

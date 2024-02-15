@@ -4,5 +4,7 @@
         <xacro:include filename="controller.xacro" />
         <xacro:include filename="camera.xacro"/>
         <xacro:include filename="stereo_camera.xacro"/>
+        <xacro:include filename="gps.xacro"/>
+        <xacro:include filename="imu.xacro"/>
         <xacro:include filename="$(find moborobo)/urdf/RS-16.urdf.xacro"/>
     </robot>
