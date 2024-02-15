@@ -19,6 +19,19 @@ https://github.com/kaantuncer/Moborobo-Project/
     * `cp /opt/ros/noetic/share/slam_toolbox/config/mapper_params_online_async.yaml catkin_ws/src/moborobo/config/`
     * `roslaunch slam_toolbox online_async.launch params_file:=./src/moborobo/config/mapper_params_online_async.yaml use_sim_time:=true`
 
+#### FOR RUNNING GPS:
+
+* `pip install pyserial`
+* `sudo apt install ros-noetic-nmea-msgs `
+
+* ##### if permission denied while running the py script:
+  * `sudo su`
+  * //type your password
+  * `cd /`
+  * `cd dev`
+  * `chown username ttyUSB0`
+
+
 ## How to Run?
 * run this command in catkin_ws before launch: `source devel/setup.bash`
 * for launch: `roslaunch moborobo gmapping_room.launch`
