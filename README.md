@@ -22,7 +22,8 @@ https://github.com/kaantuncer/Moborobo-Project/
 #### FOR RUNNING GPS:
 
 * `pip install pyserial`
-* `sudo apt install ros-noetic-nmea-msgs `
+* `sudo apt install ros-noetic-nmea-msgs`
+* Need to be sure that gps is connected with usb port
 
 * ##### if permission denied while running the py script:
   * `sudo su`
@@ -30,6 +31,9 @@ https://github.com/kaantuncer/Moborobo-Project/
   * `cd /`
   * `cd dev`
   * `chown username ttyUSB0`
+ 
+* `rosrun moborobo locoSysPublisher.py` for publishing the gps data
+* `rosrun moborobo locoSysSubscriber.py` for obtaining and reading the data (or you can simply run `rostopic echo /moborobo/mygps`)
 
 
 ## How to Run?
