@@ -41,6 +41,7 @@ https://github.com/kaantuncer/Moborobo-Project/
 * for launch: `roslaunch moborobo gmapping_room.launch`
 
 
-## Jetson Nano
+# Jetson Nano 2GB
 * https://blog.openzeka.com/otonom-araclar/jetson-terminal-kurulumu/
 * https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup
+* https://www.stereolabs.com/blog/ros-and-nvidia-jetson-nano
