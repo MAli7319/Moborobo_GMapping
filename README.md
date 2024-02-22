@@ -39,3 +39,10 @@ https://github.com/kaantuncer/Moborobo-Project/
 ## How to Run?
 * run this command in catkin_ws before launch: `source devel/setup.bash`
 * for launch: `roslaunch moborobo gmapping_room.launch`
+
+
+
+* https://blog.openzeka.com/otonom-araclar/jetson-terminal-kurulumu/
+* https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup
+
+* https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup
