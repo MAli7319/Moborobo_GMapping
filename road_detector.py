@@ -48,14 +48,14 @@ class RoadDetector():
 			model_type = "vit_t"
 
 			device = "cuda" if torch.cuda.is_available() else "cpu"
-
 			sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
 			sam.to(device=device)
 			sam.eval()
-
+			
+			# Very Slow
 			predictor = SamPredictor(sam)
 			predictor.set_image(cv2_img)
-
+			
 			input_point = np.array([[cv2_img.shape[1]//2, cv2_img.shape[0] - 25]])
 			input_label = np.array([1])
 
@@ -67,23 +67,21 @@ class RoadDetector():
 
 			self.output = self.overlay(cv2_img, mask, (0,255,0), 0.3)
 
+
 		except CvBridgeError as e:
 			print(e)
 
 		else:
-			cv2.imshow("image", cv2_img)
-			cv2.waitKey(1)
-			cv2.destroyAllWindows()
+			pass
 
-		time.sleep(0.5)
 
 
 	def road_publish(self):
 
-		pub = rospy.Publisher("zed2/rgb/road", Image, queue_size=10)
+		pub = rospy.Publisher("zed_node/rgb/road", Image, queue_size=10)
 		rospy.init_node("road_detector", anonymous=True)
-		rospy.Subscriber("zed2/rgb/image_raw", Image, self.callback)
-		rate = rospy.Rate(10)
+		rospy.Subscriber("zed_node/rgb/image_rect_color", Image, self.callback)
+		rate = rospy.Rate(100)
 		
 		while not rospy.is_shutdown():
 			if self.output is not None:
@@ -93,4 +91,3 @@ class RoadDetector():
 
 if __name__ == "__main__":
 	RoadDetector().road_publish()
-
