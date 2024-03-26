@@ -76,17 +76,19 @@ class RoadDetector():
 		time.sleep(0.5)
 
 
-	def img_viewer(self):
+	def road_publish(self):
 
-		rospy.init_node("image_viewer", anonymous=True)
+		pub = rospy.Publisher("zed2/rgb/road", Image, queue_size=10)
+		rospy.init_node("road_detector", anonymous=True)
 		rospy.Subscriber("zed2/rgb/image_raw", Image, self.callback)
-
-		if self.output != None:
-			rospy.Publisher("zed2/rgb/road", self.output)
-
-		rospy.spin()
+		rate = rospy.Rate(10)
+		
+		while not rospy.is_shutdown():
+			if self.output is not None:
+				pub.publish(self.bridge.cv2_to_imgmsg(self.output))
+			rate.sleep()
 
 
 if __name__ == "__main__":
-	RoadDetector().img_viewer()
+	RoadDetector().road_publish()
 
