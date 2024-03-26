@@ -2,7 +2,7 @@
 
 ### To access the last year's work: 
 https://github.com/kaantuncer/Moborobo-Project/
-
+### Important! If you face cmake errors while building, install the package that written in the log
 ## Which changes are made?
 
 #### FOR MOBOROBO GMAPPING:
