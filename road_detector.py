@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 #sensor_msgs/CompressedImage
+
 # many thanks: https://github.com/ultralytics/ultralytics/issues/561
+     # and: https://stackoverflow.com/questions/55377442/how-to-subscribe-and-publish-images-in-ros
 
 import rospy
 import cv2
