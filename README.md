@@ -35,6 +35,8 @@ https://github.com/kaantuncer/Moborobo-Project/
 * `rosrun moborobo locoSysPublisher.py` for publishing the gps data
 * `rosrun moborobo locoSysSubscriber.py` for obtaining and reading the data (or you can simply run `rostopic echo /moborobo/mygps`)
 
+Simulation: `sudo apt-get install ros-noetic-hector-gazebo-plugins`
+
 
 ## How to Run?
 * run this command in catkin_ws before launch: `source devel/setup.bash`
