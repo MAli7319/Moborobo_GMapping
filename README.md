@@ -38,6 +38,10 @@ https://github.com/kaantuncer/Moborobo-Project/
 Simulation: `sudo apt-get install ros-noetic-hector-gazebo-plugins`
 
 
+#### Distance Calculation:
+
+
+
 ## How to Run?
 * run this command in catkin_ws before launch: `source devel/setup.bash`
 * for launch: `roslaunch moborobo gmapping_room.launch`
