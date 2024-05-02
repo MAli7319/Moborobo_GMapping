@@ -3,6 +3,7 @@
 ### To access the last year's work: 
 https://github.com/kaantuncer/Moborobo-Project/
 ### Important! If you face cmake errors while building, install the package that written in the log
+## Also Orin cannot booted with SD card since it does not have jetpack image
 ## Which changes are made?
 
 #### FOR MOBOROBO GMAPPING:
