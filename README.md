@@ -6,13 +6,45 @@ https://github.com/kaantuncer/Moborobo-Project/
 ## Also Orin cannot booted with SD card since it does not have jetpack image
 ## Which changes are made?
 
+
+#### FOR RSLIDAR:
+
+* Run these commands in your workspace:
+* ```
+  git clone https://github.com/RoboSense-LiDAR/rslidar_sdk.git
+  cd rslidar_sdk
+  git submodule init
+  git submodule update
+
+  sudo apt-get update
+  sudo apt-get install -y libyaml-cpp-dev
+  sudo apt-get install -y  libpcap-dev  
+  ```
+* For more info, you can visit: https://github.com/RoboSense-LiDAR/rslidar_sdk
+  
 #### FOR MOBOROBO GMAPPING:
 
 * rewriten line 17 in navigation.launch (node pkg gmapping part)
 * removed robosense_16.dae geometry part in RS-16.urdf.xacro file (line 20-22)
+* for rslidar we set the parameters for ethernet connection as:
+  * connect the ethernet (yellow thick cable)
+  * enter the wired settings from top-right menu
+  * set the ipv4 method as manual
+  * enter address as 192.168.1.102
+  * enter netmask as 255.255.255.0
+* some parameters are changed and added to the config.yaml file such as:
+  * change-> send_packet_ros: true (line 6)
+  * change-> lidar_type: RS16 (line 10)
+  * add-> frame_id: rslidar (line 13)
 
 #### FOR MOBOROBO SLAM WITH "slam-toolbox":
+##### On robot:
+* `sudo apt install ros-noetic-slam-toolbox`
+* Download the zip file in the link: `https://github.com/SteveMacenski/slam_toolbox/tree/noetic-devel`.
+* You need to extract the zip file inside the on_robot/src directory
 
+
+##### Simulation:
 * commented out line 17-23 in navigation.launch (node pkg gmapping part)
 
   * ##### For execution:
