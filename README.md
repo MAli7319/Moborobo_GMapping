@@ -89,6 +89,19 @@ https://github.com/kaantuncer/Moborobo-Project/
 
 * Run this command to test to see whether it works or not: `roslaunch zed_display_rviz display_zed2.launch`
 
+
+#### FOR ROAD DETECTION
+##### PyTorch Installation:
+* Download the file `torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl` from the website https://developer.download.nvidia.com/compute/redist/jp/v511/pytorch/
+* Run these commands directly
+  ```
+  export TORCH_INSTALL=~/Downloads/torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
+  
+  pip install --upgrade pip
+  pip install numpy==’1.16.5’
+  pip install --no-cache https://developer.download.nvidia.com/compute/redist/jp/v511/pytorch/torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
+  ```
+
 #### FOR RUNNING GPS:
 
 * `pip install pyserial`
