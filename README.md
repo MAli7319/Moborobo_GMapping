@@ -54,6 +54,40 @@ https://github.com/kaantuncer/Moborobo-Project/
     * `sudo apt install ros-noetic-slam-toolbox`
     * `cp /opt/ros/noetic/share/slam_toolbox/config/mapper_params_online_async.yaml catkin_ws/src/moborobo/config/`
     * `roslaunch slam_toolbox online_async.launch params_file:=./src/moborobo/config/mapper_params_online_async.yaml use_sim_time:=true`
+   
+#### FOR ZED2 CAMERA
+* ```
+  sudo apt install ros-noetic-rviz-imu-plugin
+  sudo apt install ros-noetic-rtabmap
+  sudo apt install ros-noetic-rtabmap-ros
+  sudo apt install ros-noetic-depthimage-to-laserscan
+
+  cd /your_workspace(on_robot)/src
+  git clone --recursive https://github.com/stereolabs/zed-ros-wrapper.git
+  cd ..
+  rosdep install --from-paths src --ignore-src -r -y
+  catkin_make -DCMAKE_BUILD_TYPE=Release
+  source devel/setup.bash
+
+  cd /your_workspace(on_robot)/src
+  git clone https://github.com/stereolabs/zed-ros-examples.git
+  cd ../
+  rosdep install --from-paths src --ignore-src -r -y
+  ```
+* Before `catkin_make` you should remove the zed-ros-interfaces file which is **inside the zed-ros-wrapper** file
+* ```
+  catkin_make -DCMAKE_BUILD_TYPE=Release
+  source devel/setup.bash
+
+  cd /your_workspace(on_robot)/src
+  git clone https://github.com/stereolabs/zed-ros-examples.git
+  cd ..
+  rosdep install --from-paths src --ignore-src -r -y
+  catkin_make -DCMAKE_BUILD_TYPE=Release
+  source devel/setup.bash
+  ```
+
+* Run this command to test to see whether it works or not: `roslaunch zed_display_rviz display_zed2.launch`
 
 #### FOR RUNNING GPS:
 
