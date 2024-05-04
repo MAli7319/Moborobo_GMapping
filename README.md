@@ -86,9 +86,7 @@ https://github.com/kaantuncer/Moborobo-Project/
   catkin_make -DCMAKE_BUILD_TYPE=Release
   source devel/setup.bash
   ```
-
 * Run this command to test to see whether it works or not: `roslaunch zed_display_rviz display_zed2.launch`
-
 
 #### FOR ROAD DETECTION
 ##### PyTorch Installation:
