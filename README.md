@@ -36,13 +36,16 @@ https://github.com/kaantuncer/Moborobo-Project/
   * change-> send_packet_ros: true (line 6)
   * change-> lidar_type: RS16 (line 10)
   * add-> frame_id: rslidar (line 13)
-
+    
 #### FOR MOBOROBO SLAM WITH "slam-toolbox":
 ##### On robot:
 * `sudo apt install ros-noetic-slam-toolbox`
 * Download the zip file in the link: `https://github.com/SteveMacenski/slam_toolbox/tree/noetic-devel`.
 * You need to extract the zip file inside the on_robot/src directory
 
+* `sudo apt install ros-noetic-pointcloud-to-laserscan`
+* Run this command in your workspace/src (on_robot/src): `git clone https://github.com/ros-perception/pointcloud_to_laserscan.git --branch indigo-devel --single-branch`
+* Go to the file Moborobo-Project/on_robot/src/pointcloud_to_laserscan/src/pointcloud_to_laserscan_nodelet.cpp and change the line 241 as : `PLUGINLIB_EXPORT_CLASS(pointcloud_to_laserscan::PointCloudToLaserScanNodelet, nodelet::Nodelet);`
 
 ##### Simulation:
 * commented out line 17-23 in navigation.launch (node pkg gmapping part)
