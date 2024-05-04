@@ -45,7 +45,7 @@ https://github.com/kaantuncer/Moborobo-Project/
 
 * `sudo apt install ros-noetic-pointcloud-to-laserscan`
 * Run this command in your workspace/src (on_robot/src): `git clone https://github.com/ros-perception/pointcloud_to_laserscan.git --branch indigo-devel --single-branch`
-* Go to the file Moborobo-Project/on_robot/src/pointcloud_to_laserscan/src/pointcloud_to_laserscan_nodelet.cpp and change the line 241 as : `PLUGINLIB_EXPORT_CLASS(pointcloud_to_laserscan::PointCloudToLaserScanNodelet, nodelet::Nodelet);`
+* Go to the file Moborobo-Project/on_robot/src/pointcloud_to_laserscan/src/pointcloud_to_laserscan_nodelet.cpp and change the line 241 as : `PLUGINLIB_EXPORT_CLASS(pointcloud_to_laserscan::PointCloudToLaserScanNodelet, nodelet::Nodelet);`  (inspired from https://github.com/ros-perception/depthimage_to_laserscan/issues/31)
 
 ##### Simulation:
 * commented out line 17-23 in navigation.launch (node pkg gmapping part)
