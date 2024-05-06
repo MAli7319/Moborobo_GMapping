@@ -100,6 +100,15 @@ https://github.com/kaantuncer/Moborobo-Project/
   pip install --no-cache https://developer.download.nvidia.com/compute/redist/jp/v511/pytorch/torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
   ```
 
+##### MobileSAM
+* ```
+  cd your_workspace(on_robot)/src/moborobot/scripts
+  git clone https://github.com/ChaoningZhang/MobileSAM.git
+  ```
+* There is a file named *mobile_sam* inside the cloned repository
+* Cut the *mobile_sam* folder and paste it to the scripts file (one level higher)
+* Run the python script `python3 path/to/python/script/road_detector.py`
+
 #### FOR RUNNING GPS:
 
 * `pip install pyserial`
