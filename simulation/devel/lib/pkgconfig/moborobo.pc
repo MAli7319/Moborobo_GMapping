@@ -1,0 +1,8 @@
+prefix=/home/moborobot/Moborobo-Project/simulation/devel
+
+Name: moborobo
+Description: Description of moborobo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

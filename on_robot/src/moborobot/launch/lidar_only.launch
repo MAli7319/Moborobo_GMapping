@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <!-- Starting rslidar -->
+    <include file="$(find rslidar_sdk)/launch/start.launch" />
+
+</launch>

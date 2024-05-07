@@ -1,0 +1,8 @@
+prefix=/home/moborobot/Moborobo-Project/on_robot/install
+
+Name: roboteq_driver
+Description: Description of roboteq_driver
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy tf robot_msgs serial
