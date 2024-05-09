@@ -112,6 +112,7 @@ https://github.com/kaantuncer/Moborobo-Project/
 #### FOR RUNNING GPS:
 
 * `pip install pyserial`
+* `pip3 install open3d`
 * `sudo apt install ros-noetic-nmea-msgs`
 * Need to be sure that gps is connected with usb port
 
@@ -133,6 +134,21 @@ Simulation: `sudo apt-get install ros-noetic-hector-gazebo-plugins`
 
 
 ## How to Run?
-* run this command in catkin_ws before launch: `source devel/setup.bash`
-* for launch: `roslaunch moborobo gmapping_room.launch`
+* ```
+  sudo chmod 666 /dev/ttyACM0
+  root
+
+  cd Moborobo-Project/on_robot/
+  source devel/setup.bash
+  roslaunch moborobot motor_only.launch 
+
+  (open the second terminal)
+  cd Moborobo-Project/on_robot/
+  source devel/setup.bash
+  roslaunch moborobot slam_only.launch 
+
+  (open the third terminal)
+  roslaunch slam_toolbox offline.launch params_file:=./src/moborobot/config/mapper_params_offline.yaml use_sim_time:=true
+  ```
+  
 
