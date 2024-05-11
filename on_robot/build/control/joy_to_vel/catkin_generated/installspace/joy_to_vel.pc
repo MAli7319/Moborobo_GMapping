@@ -1,8 +1,0 @@
-prefix=/home/moborobot/Moborobo-Project/on_robot/install
-
-Name: joy_to_vel
-Description: Description of joy_to_vel
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

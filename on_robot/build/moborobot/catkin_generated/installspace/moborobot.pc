@@ -1,8 +1,0 @@
-prefix=/home/moborobot/Moborobo-Project/on_robot/install
-
-Name: moborobot
-Description: Description of moborobot
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
