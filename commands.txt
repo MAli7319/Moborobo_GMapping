@@ -1,0 +1,16 @@
+sudo chmod 666 /dev/ttyACM0
+root
+
+cd Moborobo-Project/on_robot/
+source devel/setup.bash
+roslaunch moborobot motor_only.launch 
+
+(open the second terminal)
+cd Moborobo-Project/on_robot/
+source devel/setup.bash
+roslaunch moborobot slam_only.launch 
+
+(open the third terminal)
+roslaunch slam_toolbox offline.launch params_file:=./src/moborobot/config/mapper_params_offline.yaml use_sim_time:=true
+
+map files = https://mega.nz/folder/REBjiRSJ#tRgef0miOz_Q2nZwHjbutw
