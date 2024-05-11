@@ -1,2 +1,0 @@
-moborobo:robosense_simulator/robosense_description:robosense_simulator/robosense_gazebo_plugins:robosense_simulator/robosense_simulator/robosense_simulator
--DCATKIN_DEVEL_PREFIX=/home/moborobot/Moborobo-Project/simulation/devel -DCMAKE_INSTALL_PREFIX=/home/moborobot/Moborobo-Project/simulation/install -G Unix Makefiles

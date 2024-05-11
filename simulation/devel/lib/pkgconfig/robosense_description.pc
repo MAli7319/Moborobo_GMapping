@@ -1,8 +1,0 @@
-prefix=/home/moborobot/Moborobo-Project/simulation/devel
-
-Name: robosense_description
-Description: Description of robosense_description
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
