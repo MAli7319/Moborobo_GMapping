@@ -1,0 +1,34 @@
+sudo chmod 666 /dev/ttyACM0
+root
+
+cd Moborobo-Project/on_robot/
+source devel/setup.bash
+roslaunch moborobot motor_only.launch 
+
+(open the second terminal)
+cd Moborobo-Project/on_robot/
+source devel/setup.bash
+roslaunch moborobot slam_only.launch 
+
+(open the third terminal)
+roslaunch slam_toolbox offline.launch params_file:=./src/moborobot/config/mapper_params_offline.yaml use_sim_time:=true
+
+
+-------------------------navigation------------------------------
+cd Moborobo-Project/on_robot/
+source devel/setup.bash
+roslaunch moborobot navigate.launch 
+
+(open the second terminal)
+roslaunch slam_toolbox online_async.launch params_file:=./src/moborobot/config/mapper_params_online_async.yaml use_sim_time:=false
+
+2D Pose Estimate and deserialize again or do it with rosservice
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/velichan_map/velichan_v2'
+match_type: 2
+initial_pose:
+  x: -40.0
+  y: -28.0
+  theta: 2.2" 
+
+
+map files = https://mega.nz/folder/REBjiRSJ#tRgef0miOz_Q2nZwHjbutw
