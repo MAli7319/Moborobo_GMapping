@@ -15,6 +15,8 @@ roslaunch slam_toolbox offline.launch params_file:=./src/moborobot/config/mapper
 
 
 -------------------------navigation------------------------------
+map files = https://mega.nz/folder/REBjiRSJ#tRgef0miOz_Q2nZwHjbutw
+
 cd Moborobo-Project/on_robot/
 source devel/setup.bash
 roslaunch moborobot navigate.launch 
@@ -26,9 +28,28 @@ roslaunch slam_toolbox online_async.launch params_file:=./src/moborobot/config/m
 rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/velichan_map/velichan_v2'
 match_type: 2
 initial_pose:
-  x: -40.0
-  y: -28.0
-  theta: 2.2" 
+  x: -40.29
+  y: -25.01
+  theta: 2.1" 
+
+  
+rectorate_path:
+	edge 1 to 2 loc  (the point where you started)
+	edge 1 to 2 goal (X=-1.02,   Y=-0.01,   Z=-3.13)
+	edge 2 to 3 loc  (X=115.26,  Y=15.00,   Z=-1.55)
+	edge 2 to 3 goal (X=2.72,    Y=0.26,    Z=-3.04)
+	edge 3 to 4 loc  (X=0.01,    Y=0.01,    Z=0.01)
+	edge 3 to 4 goal (X=148.20,  Y=3.48,    Z=-0.06)
+	edge 4 to 5 loc  (X=-0.01,   Y=-0.01,   Z=0.03)
+	edge 4 to 5 goal (X=65.58,   Y=-79.92,  Z=-1.11)
+	edge 5 to 6 loc  (X=0.01,    Y=-0.01,   Z=0.01)
+	edge 5 to 6 goal (X=167.87,  Y=-15.84,  Z=-0.18)
+	edge 6 to 7 loc  (X=0.01,    Y=-0.01,   Z=0.01)
+	edge 6 to 7 goal (X=11.52,   Y=73.33,   Z=1.65)
+	
+	bonus:
+	edge 2 to edebiyat loc  (X=-0.01,   Y=0.03,   Z=-3.11)
+	edge 2 to edebiyat goal (X=2.97,    Y=-93.62, Z=-1.36)
 
 
-map files = https://mega.nz/folder/REBjiRSJ#tRgef0miOz_Q2nZwHjbutw
+
