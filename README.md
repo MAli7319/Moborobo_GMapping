@@ -128,6 +128,18 @@ https://github.com/kaantuncer/Moborobo-Project/
 
 Simulation: `sudo apt-get install ros-noetic-hector-gazebo-plugins`
 
+#### FOR RECEIVING BATTERY LEVEL INFO:
+
+* Need to be sure that gps is connected with usb port
+* Go to the scripts directory
+* Run: `python3 battery_level_publisher.py`
+
+* ##### if permission denied while running the py script:
+  * `sudo su`
+  * //type your password
+  * `cd /`
+  * `cd dev`
+  * `chown username ttyUSB0`
 
 #### PATH PLANNING:
 
