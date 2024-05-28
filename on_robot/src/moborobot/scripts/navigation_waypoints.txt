@@ -1,0 +1,193 @@
+-----edge 1 to 2 loc-----
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/rectorate_path/edge_8_serial'
+match_type: 2
+initial_pose: 
+  x: ?
+  y: ?
+  theta: ?"
+  
+ -----edge 1 to 2 goal-----
+ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: -1.02
+    y: -0.01
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: -0.9999832
+    w: 0.00579629" 
+    
+    
+
+-----edge 2 to 3 loc-----
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/rectorate_path/edge_7_serial'
+match_type: 2
+initial_pose:
+  x: 115.26
+  y: 15.00
+  theta: -1.55"
+  
+ -----edge 2 to 3 goal-----
+ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: 2.72
+    y: 0.26
+    z: 0
+  orientation:
+    x: 0
+    y: 0
+    z: -0.99871014
+    w: 0.05077448" 
+    
+    
+    
+-----edge 3 to 4 loc-----
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/rectorate_path/edge_3_serial'
+match_type: 2
+initial_pose:
+  x: 0.01
+  y: 0.01
+  theta: 0.01"
+  
+ -----edge 3 to 4 goal-----
+ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: 148.20
+    y: 3.48
+    z: 0
+  orientation:
+    x: 0
+    y: 0
+    z: -0.0299955
+    w: 0.99955003" 
+ 
+ 
+ 
+ -----edge 4 to 5 loc-----
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/rectorate_path/edge_4_serial'
+match_type: 2
+initial_pose:
+  x: -0.01
+  y: 0.01
+  theta: 0.03"
+  
+ -----edge 4 to 5 goal-----
+ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: 65.58
+    y: -79.92
+    z: 0
+  orientation:
+    x: 0
+    y: 0
+    z: -0.5269433
+    w: 0.84990044" 
+    
+    
+    
+-----edge 5 to 6 loc-----
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/rectorate_path/edge_5_serial'
+match_type: 2
+initial_pose:
+  x: 0.01
+  y: 0.01
+  theta: 0.01"
+  
+ -----edge 5 to 6 goal-----
+ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: 167.87
+    y: 15.84
+    z: 0
+  orientation:
+    x: 0
+    y: 0
+    z: -0.08987855
+    w: 0.99595273" 
+    
+    
+
+-----edge 6 to 7 loc-----
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/rectorate_path/edge_6_serial'
+match_type: 2
+initial_pose:
+  x: 0.01
+  y: 0.01
+  theta: 0.01"
+  
+ -----edge 6 to 7 goal-----
+ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: 11.52
+    y: 73.33
+    z: 0
+  orientation:
+    x: 0
+    y: 0
+    z: 0.73454778
+    w: 0.67855697" 
+    
+    
+    
+-----edge 2 to edebiyat loc-----
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/rectorate_path/edge_edebiyat_serial'
+match_type: 2
+initial_pose:
+  x: -0.01
+  y: 0.03
+  theta: -3.11"
+  
+ -----edge 2 to 3 goal-----
+ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: 2.97
+    y: -93.62
+    z: 0
+  orientation:
+    x: 0
+    y: 0
+    z: -0.62879302
+    w: 0.77757272" 

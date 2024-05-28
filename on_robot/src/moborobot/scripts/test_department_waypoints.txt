@@ -1,0 +1,47 @@
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/test_department/test_1_serial'
+match_type: 2
+initial_pose:
+  x: 0.01
+  y: 0.04
+  theta: 0.95" 
+
+rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: -0.05
+    y: 2.35
+    z: 0
+  orientation:
+    x: 0
+    y: 0
+    z: -0.87478893
+    w: 0.48450421" 
+
+rosservice call /slam_toolbox/deserialize_map "filename: '/home/moborobot/test_department/test_2_serial'
+match_type: 2
+initial_pose:
+  x: 0.47
+  y: 2.71
+  theta: -2.44" 
+
+rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'map'
+pose:
+  position:
+    x: -5.31
+    y: -7.28
+    z: 0
+  orientation:
+    x: 0
+    y: 0
+    z: -0.30505864
+    w: 0.95233357" 
