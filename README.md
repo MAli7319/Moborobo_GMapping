@@ -53,7 +53,7 @@ https://github.com/kaantuncer/Moborobo-Project/
   * ##### For execution:
     * `sudo apt install ros-noetic-slam-toolbox`
     * `cp /opt/ros/noetic/share/slam_toolbox/config/mapper_params_online_async.yaml catkin_ws/src/moborobo/config/`
-    * `roslaunch slam_toolbox online_async.launch params_file:=./src/moborobo/config/mapper_params_online_async.yaml use_sim_time:=true`
+    * `roslaunch slam_toolbox online_async.launch params_file:=./src/moborobo/config/mapper_params_online_async.yaml use_sim_time:=true 2> >(grep -v TF_REPEATED_DATA buffer_core)`
    
 #### FOR ZED2 CAMERA
 * ```
@@ -134,5 +134,5 @@ Simulation: `sudo apt-get install ros-noetic-hector-gazebo-plugins`
 
 ## How to Run?
 * run this command in catkin_ws before launch: `source devel/setup.bash`
-* for launch: `roslaunch moborobo gmapping_room.launch`
+* for launch: `roslaunch moborobo gmapping_room.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)`
 
